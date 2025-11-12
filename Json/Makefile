@@ -4,5 +4,8 @@ copy-test: CopyTest.cpp
 string-test: StringTest.cpp
 	clang++ -fsanitize=address -g -std=c++20 $^ -o $@
 
+parse-test: ParseTest.cpp
+	clang++ -fsanitize=address -g -std=c++20 $^ -o $@
+
 clean:
-	rm string-test copy-test
+	rm string-test copy-test parse-test

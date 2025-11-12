@@ -19,7 +19,7 @@ struct JsonStruct: JsonObj {
             out += v->to_string();
             out += ", ";
         }
-        out.erase(out.end() - 2, out.end());
+        if (store.size() > 0) out.erase(out.end() - 2, out.end());
         out += "}";
         return out;
     }
